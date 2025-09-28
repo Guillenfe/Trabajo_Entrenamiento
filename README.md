@@ -1,54 +1,38 @@
-# Trabajo_Entrenamiento
+# 🎬 Sistema de Perfilado de Usuario para Recomendación de Películas
 
-🥞 Tortitas muy esponjosas
-Ingredientes (para unas 8 tortitas medianas):
+Este proyecto construyemos un **perfil de usuario basado en ratings de películas**, con el objetivo de identificar los géneros y características más relevantes.  
+Está pensado como un paso inicial hacia un **sistema de recomendación de películas**.
 
-200 g de harina de trigo (1 ½ tazas aprox.)
+---
 
-2 cucharadas de azúcar
+## 📂 Datos
 
-1 cucharadita de levadura química (polvo de hornear)
+- `movies_curated.csv`: información de películas (título, año, géneros, directores, guionistas).  
+- `ratings.csv`: calificaciones del usuario (película, año, rating).  
 
-½ cucharadita de bicarbonato
+---
 
-1 pizca de sal
+## ⚙️ Proceso
 
-250 ml de leche (1 taza)
+1. Limpieza y preparación de datos.  
+2. Codificación de géneros y equipo con *one-hot encoding*.  
+3. Construcción de un vector de usuario a partir de sus ratings.  
+4. Normalización y ordenamiento de características.  
+5. Visualización de los **géneros más representativos** en una gráfica.  
 
-1 cucharada de vinagre o zumo de limón (para cortar la leche y hacer “buttermilk” casero)
+---
 
-1 huevo grande
+## 📊 Resultado
 
-2 cucharadas de mantequilla derretida (más un poco para la sartén)
+El notebook muestra una **gráfica de barras** con los géneros que mejor describen el perfil del usuario según sus calificaciones.  
 
-1 cucharadita de esencia de vainilla (opcional)
+---
 
-Preparación:
+## 🚀 Requisitos
 
-Haz el buttermilk casero
+Este proyecto usa [uv](https://github.com/astral-sh/uv) para la gestión de dependencias en Python.  
 
-Mezcla la leche con el vinagre o limón, remueve y deja reposar 10 minutos hasta que espese un poco.
+Instalar dependencias:  
 
-Mezcla los ingredientes secos
-
-En un bol grande: harina, azúcar, levadura, bicarbonato y sal.
-
-Mezcla los líquidos
-
-En otro bol: huevo, buttermilk, mantequilla derretida y vainilla.
-
-Une las mezclas
-
-Vierte los líquidos sobre los secos. Mezcla suavemente con una espátula o varilla, solo hasta que no veas harina seca (la masa debe quedar un poco grumosa, no la batas demasiado o perderán esponjosidad).
-
-Cocina las tortitas
-
-Calienta una sartén antiadherente a fuego medio-bajo y engrásala ligeramente con mantequilla.
-
-Vierte un cucharón pequeño de masa.
-
-Cuando veas burbujas en la superficie, dale la vuelta y cocina 1–2 minutos más.
-
-Sirve y disfruta
-
-Acompaña con miel, sirope de arce, fruta, nata montada o lo que más te guste.
+```bash
+uv pip install pandas numpy scikit-learn scipy matplotlib
