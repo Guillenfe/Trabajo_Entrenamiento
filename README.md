@@ -47,7 +47,7 @@ Clonar el repo:
 git clone https://github.com/Guillenfe/Trabajo_Entrenamiento.git
 cd Trabajo_Entrenamiento
 ```
-Instala las dependencias con uv:
+Instalar las dependencias con uv:
 
 ```bash
 uv sync
