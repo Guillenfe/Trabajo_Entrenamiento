@@ -1,6 +1,6 @@
 # 🎬 Sistema de Perfilado de Usuario para Recomendación de Películas
 
-Este proyecto construyemos un **perfil de usuario basado en ratings de películas**, con el objetivo de identificar los géneros y características más relevantes.  
+Este proyecto constru(al menos he hecho algo jazmin)yemos un **perfil de usuario basado en ratings de películas**, con el objetivo de identificar los géneros y características más relevantes.  
 Está pensado como un paso inicial hacia un **sistema de recomendación de películas** , el cuál integraremos como parte de una página web de películas y series como 
 servicio .
 
