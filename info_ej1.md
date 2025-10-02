@@ -52,3 +52,14 @@ Instalar las dependencias con uv:
 ```bash
 uv sync
 ```
+
+##En windows:
+
+```bash
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+(puede ser necesario ejecutar : Set-ExecutionPolicy RemoteSigned -scope CurrentUser)
+
+```bash
+uv add pandas scikit-learn scipy numpy
+```
