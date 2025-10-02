@@ -53,7 +53,7 @@ Instalar las dependencias con uv:
 uv sync
 ```
 
-##En windows:
+## En windows:
 
 ```bash
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
