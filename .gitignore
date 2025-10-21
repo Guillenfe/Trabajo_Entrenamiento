@@ -1,0 +1,32 @@
+# Variables de entorno
+.env
+Pruebas/.env
+
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencias
+*.egg-info/
+dist/
+build/
