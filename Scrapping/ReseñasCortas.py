@@ -14,7 +14,7 @@ driver = webdriver.Chrome(options=option)
 
 # Funcion para buscar peliculas en IMDB
 def search_imdb(movie_title):
-    search_url = f"https://www.imdb.com/find/?q={movie_title.replace(' ', '+')}&s=tt"
+    search_url = f"https://www.imdb.com/find/?q={movie_title.replace(' ', '+')}&s=tt&ttype=ft&ref_=fn_mov"
     driver.get(search_url)
 
     try:
@@ -36,7 +36,7 @@ def search_imdb(movie_title):
         print(f"Error finding movie: {e}")
         return None
 
-# Funcion para 'scrapear' detalles de la pelicula (todo lo que no son reseñas)
+# Funcion para 'scrapear' título y puntuación en IMDB de la película
 def scrape_movie(movie_id):
     movie_url = f"https://www.imdb.com/title/{movie_id}"
     driver.get(movie_url)
