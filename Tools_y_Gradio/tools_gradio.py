@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 # -------------------- CARGA DE CONFIG --------------------
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-REVIEWS_FILE = "Idiocracia_largas.json"
+GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY")
+REVIEWS_FILE = "./Scrapping/movies/matilda.json"
 
 MODEL = "gemini-2.0-flash"
 
@@ -17,7 +17,7 @@ def cargar_reseñas():
     try:
         with open(REVIEWS_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
-        reviews = [r for r in data.get("reviews", []) if r.get("content")]
+        reviews = [r for r in data.get("reviews", []) if r['text']]
         return reviews
     except Exception as e:
         return [f"[ERROR] No se pudieron cargar reseñas: {e}"]
@@ -28,7 +28,7 @@ REVIEWS = cargar_reseñas()
 def buscar_pelicula(nombre: str):
     # Busca el título de una película dentro del JSON de reseñas y muestra reseñas completas
     if not nombre:
-        return "❗ Ingresa el nombre de una película."
+        return "Ingresa el nombre de una película."
 
     nombre = nombre.lower()
     coincidencias = []
@@ -113,7 +113,7 @@ def analizar_reseñas(pregunta: str, traducir=False):
         return REVIEWS[0]
 
     # Tomamos solo el texto de las primeras 10 reseñas
-    contexto = "\n".join([r["content"] for r in REVIEWS[:10]])
+    contexto = "\n".join([r["text"] for r in REVIEWS[:10]])
     prompt = f"Basándote en estas reseñas de IMDb:\n{contexto}\n\nResponde: {pregunta}"
 
     respuesta = gemini_generate(prompt)
