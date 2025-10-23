@@ -148,7 +148,7 @@ def scrap_long_reviews(movie_id, max_reviews=20):
 def save_reviews_to_file(title, rating, reviews):
     try:
         file_route = "./Scrapping/movies/"
-        file_name_json = f"{title.replace(' ','_')}.json"
+        file_name_json = f"{title.replace(' ','_').lower()}.json"
         file = f"{file_route}{file_name_json}"
 
         movie_data = {
