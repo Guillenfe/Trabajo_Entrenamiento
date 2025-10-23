@@ -7,7 +7,7 @@ import uuid
 
 from reviewScrapping import search_imdb, scrape_movie, scrap_long_reviews, save_reviews_to_file
 
-# 🔑 Cargar API key
+# Cargar API key
 load_dotenv(override=True)
 gemini_api_key = os.getenv('GOOGLE_API_KEY')
 
@@ -32,7 +32,6 @@ else:
     exit()
 
 # JSON de reseñas
-#json_cortas_path = f"../Scrapping/movies/{movie_name}_cortas.json"
 json_path = f"./Scrapping/movies/{movie_name}.json"
 
 # Comprobar existencia
@@ -61,7 +60,7 @@ def get_embeddings(text_batch):
     return [item.embedding for item in response.data]
 
 reviews_embeddings = []
-batch_size = 100
+batch_size = 25
 for i in range(0, len(reviews_text), batch_size):
     batch = reviews_text[i:i+batch_size]
     reviews_embeddings.extend(get_embeddings(batch))
@@ -118,7 +117,7 @@ No agregues información que no esté en las reseñas.
 
 # Función para generar respuesta
 def generate_response(combined_content):
-    query = "¿Cuál es la opinión pública de la película?"
+    query = "Haz una resumen de la opinión general de la película basado en las críticas más profesionales."
 
     response = chat_client.chat.completions.create(
         model=chat_model,
@@ -130,7 +129,7 @@ def generate_response(combined_content):
     )
     return response
 
-user_question = "Haz una resumen de la opinión general de la película basado en las críticas más profesionales."
+user_question = "¿Cuál es la opinión pública de la película?"
 
 # Obtener resultados semánticos
 results = semantic_search(user_question)
