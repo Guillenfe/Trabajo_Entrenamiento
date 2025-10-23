@@ -163,7 +163,7 @@ def save_reviews_to_file(title, rating, reviews):
         print(f"Error while saving reviews to file: {e}")
     return False
 
-def scrap_movie(title):
+def scrape_reviews(title):
     movie_name = title
     movie_id = search_imdb(movie_name)
 
