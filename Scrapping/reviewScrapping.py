@@ -14,7 +14,7 @@ driver = webdriver.Chrome(options=option)
 
 # Funcion para buscar peliculas en IMDB
 def search_imdb(movie_title):
-    search_url = f"https://www.imdb.com/find/?q={movie_title.replace(' ', '+')}&s=tt&ttype=ft&ref_=fn_mov"
+    search_url = f"https://www.imdb.com/find/?q={movie_title.replace(' ', '+')}&s=tt&ttype=ft&ref_=fn_mov" #q:titulo s=titulos ttype=FeaturedFils(largometrajes) ref_=parametro de IMDB
     driver.get(search_url)
 
     try:
@@ -28,7 +28,8 @@ def search_imdb(movie_title):
         movie_link = first_result.get_attribute("href")
 
         # Extraer el ID (ejemplo: tt1375666)
-        movie_id = movie_link.split("/title/")[1].split("/")[0]
+        parte_id = movie_link.split("/title/")[1]
+        movie_id = parte_id.split("/")[0]
 
         return movie_id
 
@@ -39,7 +40,7 @@ def search_imdb(movie_title):
 # Funcion para 'scrapear' título y puntuación en IMDB de la película
 def scrape_movie(movie_id):
     movie_url = f"https://www.imdb.com/title/{movie_id}"
-    driver.get(movie_url)
+    driver.get(movie_url) #el get es para que vaya a esa web
 
     # Esperar a que cargue el título
     WebDriverWait(driver, 6).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
@@ -54,7 +55,7 @@ def scrape_movie(movie_id):
                 (By.CSS_SELECTOR, "span.ipc-rating-star--rating")
             )
         )
-        rating = rating_elem.text.strip()
+        rating = rating_elem.text.strip() #para eliminar espacios el strip
     except:
     # si la valoracion no existe , se devuelve N/A
         rating = "N/A"
@@ -78,8 +79,10 @@ def scrap_long_reviews(movie_id, max_reviews=20):
         )
 
         try:
+            #aqui esta buscando el boton de "ver más"
             see_more_btn = driver.find_element(By.XPATH, "//span[contains(@class,'chained-see-more-button')]/button")
-            
+
+            #aqui acepta las cookies
             cookies_btn = driver.find_element(By.CSS_SELECTOR, "button.icb-btn[data-testid='accept-button']")
             cookies_banner = driver.find_element(By.CSS_SELECTOR, "div[data-testid='consent-banner']")
             cookies_btn.click()
@@ -164,7 +167,7 @@ def save_reviews_to_file(title, rating, reviews):
     return False
 
 # Programita para poder ejecutarlo en la bash de forma interactiva
-movie_title = input("Introduzca película a buscar: ") #si no se quiere ejecutar en la bash, borrar el imput y poner aqui algun texto como "Pulp Fiction"
+movie_title = input("Introduzca película a buscar: ") #si no se quiere ejecutar en la bash, borrar el input y poner aqui algun texto como "Pulp Fiction"
 movie_id = search_imdb(movie_title)
 
 if movie_id:
@@ -172,30 +175,6 @@ if movie_id:
     title, rating = scrape_movie(movie_id)
     reviews = scrap_long_reviews(movie_id, 100)
     save_reviews_to_file(title, rating, reviews)
-
-    """
-    # Guardar en formato JSON
-    file_name_json = f"{title.replace(' ','_')}_Largas.json"
-    reviews_dict = {f"review{i+1}": review for i, review in enumerate(reviews)}
-
-    movie_data = {
-        "title": title,
-        "rating": rating,
-        "reviews": reviews_dict
-    }
-    with open(file_name_json, "w", encoding="utf-8") as json_file:
-        json.dump(movie_data, json_file, ensure_ascii=False, indent=4)
-
-    # Mostrarlo en la bash con colorines , gracias a "colorama" , una libreria de python
-    print(Fore.CYAN + "\n🎬  Movie: " + Fore.YELLOW + title + Style.RESET_ALL)
-    print(Fore.GREEN + "⭐  IMDb Rating: " + Fore.YELLOW + rating + "/10" + Style.RESET_ALL)
-
-    print(Fore.MAGENTA + "\n📝  Top 20 Reviews:" + Style.RESET_ALL)
-    print(Fore.WHITE + "-----------------------------------" + Style.RESET_ALL)
-    # for i, review in enumerate(reviews[:20], start=1): #aquí se debería de igualar el numero de reseñas con el de arriba , para mostrar esas
-        # print(Fore.LIGHTBLUE_EX + f"💬  Review {i}: {review}" + Style.RESET_ALL)
-    print(Fore.WHITE + "-----------------------------------" + Style.RESET_ALL)
-"""
 
 else:
     print("Movie not found.")
