@@ -5,6 +5,8 @@ from openai import OpenAI
 import chromadb
 import uuid
 
+from reviewScrapping import search_imdb, scrape_movie, scrap_long_reviews, save_reviews_to_file
+
 # 🔑 Cargar API key
 load_dotenv(override=True)
 gemini_api_key = os.getenv('GOOGLE_API_KEY')
@@ -19,6 +21,15 @@ chat_model = "gemini-2.5-flash-preview-05-20"
 
 # Pedir película
 movie_name = input("Escribe el nombre de la película (ej: idiocracia): ").replace(' ','_').lower()
+movie_id = search_imdb(movie_name)
+
+if movie_id:
+    title, rating = scrape_movie(movie_id)
+    reviews = scrap_long_reviews(movie_id, 100)
+    save_reviews_to_file(title, rating, reviews)
+else:
+    print("ERROR")
+    exit()
 
 # JSON de reseñas
 #json_cortas_path = f"../Scrapping/movies/{movie_name}_cortas.json"
