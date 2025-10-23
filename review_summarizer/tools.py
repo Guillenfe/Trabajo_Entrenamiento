@@ -1,8 +1,8 @@
-from review_summarizer.reviewScrapper import scrap_movie
+from review_summarizer.reviewScrapper import scrape_reviews
 from json import tool
 
 search_function = {
-    "name": "scrap_movie",
+    "name": "scrape_reviews",
     "description": "Obtiene un .json con las reviews de una película."
     "Llama a esta función cada vez que necesites las reviews (reseñas) de una película.",
     "parameters": {
