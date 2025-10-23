@@ -30,10 +30,12 @@ def search_imdb(movie_title):
         # Extraer el ID (ejemplo: tt1375666)
         movie_id = movie_link.split("/title/")[1].split("/")[0]
 
+        driver.quit()
         return movie_id
 
     except Exception as e:
         print(f"Error finding movie: {e}")
+        driver.quit()
         return None
 
 # Funcion para 'scrapear' título y puntuación en IMDB de la película
@@ -58,7 +60,7 @@ def scrape_movie(movie_id):
     except:
     # si la valoracion no existe , se devuelve N/A
         rating = "N/A"
-
+    driver.quit()
     return title, rating
 
 
@@ -139,10 +141,12 @@ def scrap_long_reviews(movie_id, max_reviews=20):
         
         review_count = len(reviews)
         print(f"{review_count} reviews found")
+        driver.quit()
         return reviews if reviews else ["No reviews found"]
 
     except Exception as e:
         print(f"Error while scraping long reviews: {e}")
+        driver.quit()
         return ["No reviews found"]
 
 def save_reviews_to_file(title, rating, reviews):
