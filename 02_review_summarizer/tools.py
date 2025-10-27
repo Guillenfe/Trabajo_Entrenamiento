@@ -13,7 +13,7 @@ def scrape_reviews(input_title: str):
         print(title)
 
         # Si ya se ha scrappeado, no se repite
-        if os.path.exists(f'./review_summarizer/movies/{title.replace(' ','_')}.json'):
+        if os.path.exists(f'./02_review_summarizer/movies/{title.replace(' ','_')}.json'):
             print("Movie already scrapped")
             return title
         

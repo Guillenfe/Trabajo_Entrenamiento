@@ -44,7 +44,7 @@ def fileExists(file_path, timeout=30):
 
 def load_reviews(movie_name):
     movie_name = movie_name.replace(' ','_')
-    json_path = f"./review_summarizer/movies/{movie_name}.json"
+    json_path = f"./02_review_summarizer/movies/{movie_name}.json"
 
     # Esperamos por si el archivo se está escribiendo
     if fileExists(json_path):
