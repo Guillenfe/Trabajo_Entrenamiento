@@ -1,0 +1,271 @@
+{
+    "text": " Querido alcalde de Alicante, que as\u00ed se llama. Se\u00f1or presidente del gobierno, se\u00f1oras y se\u00f1ores diputados, bien, han sido... No me refer\u00eda a ninguno de ustedes, no s\u00e9 por qu\u00e9 aplauden. Venga ya, toma democracia. La cer\u00e1mica de Talavera no es cosa menor, dicho de otra manera, es cosa mayor. Cuanto peor, mejor para todos. Y cuanto peor para todos, mejor. Mejor para m\u00ed el suyo. Beneficio pol\u00edtico. Ustedes piensan antes de hablar o hablan tras pensar. Que Espa\u00f1a es una gran naci\u00f3n y los espa\u00f1oles muy espa\u00f1oles y muchos espa\u00f1oles. Pero somos sentimientos y tenemos seres humanos. Y har\u00e9 todo lo que pueda y un poco m\u00e1s de lo que pueda si es que eso es posible. Y har\u00e9 todo lo posible e incluso lo imposible si tambi\u00e9n lo imposible es posible. La segunda ya tal. Lo que nosotros hemos hecho, cosa que no hizo usted, es enga\u00f1ar a la gente. No he dormido nada, no me pregunten demasiado si hacen el favor. Por las carreteras tienen que ir coches y de los aeropuertos tienen que salir aviones. Como dec\u00eda Galileo, el movimiento siempre se acelera cuando se va a detener. Lo \u00fanico serio al final en la vida es ser serio. Es el vecino el que elige al alcalde y es el alcalde el que quiere que sean los vecinos el alcalde. \u00bfY la europea? Si no os port\u00e1is bien en las ponencias, es que os port\u00e1is mal en las ponencias. Hacemos lo que podemos significa lo que exactamente significa hacemos lo que podemos. Que Espa\u00f1a es una gran naci\u00f3n. Es un gran pa\u00eds y tiene espa\u00f1oles. Una Espa\u00f1a a la que 75 millones de espa\u00f1oles vienen cada a\u00f1o. Un vaso es un vaso y un plato es un plato. Tenemos que fabricar m\u00e1quinas que nos permitan seguir fabricando m\u00e1quinas porque lo que no va a hacer nunca la m\u00e1quina es fabricar m\u00e1quinas. Hay cosas m\u00e1s bonitas como esta y otras que no lo son tanto y no me acuerdo de ninguna. Me gusta Catalu\u00f1a. Hacen cosas. He ido bastantes veces este a\u00f1o a Catalu\u00f1a, tengo muchos viajes al extranjero. Esto no es como el agua que cae del cielo sin que se sepa exactamente por qu\u00e9, no. Todo lo que se refiere a m\u00ed y que figura all\u00ed y a los compa\u00f1eros del Partido Miro que figuran all\u00ed, no es cierto, salvo alguna cosa. Que la EPA de ma\u00f1ana va a ser la que vamos a conocer en el d\u00eda de ma\u00f1ana. Fin de la cita.",
+    "chunks": [
+        {
+            "timestamp": [
+                0.0,
+                4.48
+            ],
+            "text": " Querido alcalde de Alicante, que as\u00ed se llama."
+        },
+        {
+            "timestamp": [
+                4.96,
+                8.64
+            ],
+            "text": " Se\u00f1or presidente del gobierno, se\u00f1oras y se\u00f1ores diputados,"
+        },
+        {
+            "timestamp": [
+                9.72,
+                12.0
+            ],
+            "text": " bien, han sido..."
+        },
+        {
+            "timestamp": [
+                12.0,
+                16.42
+            ],
+            "text": " No me refer\u00eda a ninguno de ustedes, no s\u00e9 por qu\u00e9 aplauden."
+        },
+        {
+            "timestamp": [
+                16.94,
+                18.94
+            ],
+            "text": " Venga ya, toma democracia."
+        },
+        {
+            "timestamp": [
+                19.4,
+                23.18
+            ],
+            "text": " La cer\u00e1mica de Talavera no es cosa menor,"
+        },
+        {
+            "timestamp": [
+                23.96,
+                26.24
+            ],
+            "text": " dicho de otra manera, es cosa mayor."
+        },
+        {
+            "timestamp": [
+                26.24,
+                33.22
+            ],
+            "text": " Cuanto peor, mejor para todos. Y cuanto peor para todos, mejor. Mejor para m\u00ed el suyo."
+        },
+        {
+            "timestamp": [
+                33.38,
+                34.92
+            ],
+            "text": " Beneficio pol\u00edtico."
+        },
+        {
+            "timestamp": [
+                39.1,
+                43.16
+            ],
+            "text": " Ustedes piensan antes de hablar o hablan tras pensar."
+        },
+        {
+            "timestamp": [
+                43.58,
+                50.38
+            ],
+            "text": " Que Espa\u00f1a es una gran naci\u00f3n y los espa\u00f1oles muy espa\u00f1oles y muchos espa\u00f1oles."
+        },
+        {
+            "timestamp": [
+                50.56,
+                52.94
+            ],
+            "text": " Pero somos sentimientos y tenemos seres humanos."
+        },
+        {
+            "timestamp": [
+                52.94,
+                58.26
+            ],
+            "text": " Y har\u00e9 todo lo que pueda y un poco m\u00e1s de lo que pueda si es que eso es posible."
+        },
+        {
+            "timestamp": [
+                58.72,
+                63.24
+            ],
+            "text": " Y har\u00e9 todo lo posible e incluso lo imposible si tambi\u00e9n lo imposible es posible."
+        },
+        {
+            "timestamp": [
+                63.98,
+                65.52
+            ],
+            "text": " La segunda ya tal."
+        },
+        {
+            "timestamp": [
+                65.84,
+                72.24
+            ],
+            "text": " Lo que nosotros hemos hecho, cosa que no hizo usted, es enga\u00f1ar a la gente."
+        },
+        {
+            "timestamp": [
+                72.58,
+                75.92
+            ],
+            "text": " No he dormido nada, no me pregunten demasiado si hacen el favor."
+        },
+        {
+            "timestamp": [
+                76.26,
+                81.86
+            ],
+            "text": " Por las carreteras tienen que ir coches y de los aeropuertos tienen que salir aviones."
+        },
+        {
+            "timestamp": [
+                81.86,
+                87.06
+            ],
+            "text": " Como dec\u00eda Galileo, el movimiento siempre se acelera cuando se va a detener."
+        },
+        {
+            "timestamp": [
+                87.46,
+                90.58
+            ],
+            "text": " Lo \u00fanico serio al final en la vida es ser serio."
+        },
+        {
+            "timestamp": [
+                90.74,
+                97.7
+            ],
+            "text": " Es el vecino el que elige al alcalde y es el alcalde el que quiere que sean los vecinos el alcalde."
+        },
+        {
+            "timestamp": [
+                97.82,
+                98.8
+            ],
+            "text": " \u00bfY la europea?"
+        },
+        {
+            "timestamp": [
+                99.52,
+                104.62
+            ],
+            "text": " Si no os port\u00e1is bien en las ponencias, es que os port\u00e1is mal en las ponencias."
+        },
+        {
+            "timestamp": [
+                104.92,
+                110.36
+            ],
+            "text": " Hacemos lo que podemos significa lo que exactamente significa hacemos lo que podemos."
+        },
+        {
+            "timestamp": [
+                110.36,
+                111.04
+            ],
+            "text": ""
+        },
+        {
+            "timestamp": [
+                113.04,
+                113.54
+            ],
+            "text": " Que Espa\u00f1a es una gran naci\u00f3n."
+        },
+        {
+            "timestamp": [
+                115.94,
+                116.24
+            ],
+            "text": " Es un gran pa\u00eds y tiene espa\u00f1oles."
+        },
+        {
+            "timestamp": [
+                120.94,
+                121.2
+            ],
+            "text": " Una Espa\u00f1a a la que 75 millones de espa\u00f1oles vienen cada a\u00f1o."
+        },
+        {
+            "timestamp": [
+                124.32,
+                124.4
+            ],
+            "text": " Un vaso es un vaso y un plato es un plato."
+        },
+        {
+            "timestamp": [
+                128.52,
+                131.02
+            ],
+            "text": " Tenemos que fabricar m\u00e1quinas que nos permitan seguir fabricando m\u00e1quinas porque lo que no va a hacer nunca la m\u00e1quina es fabricar m\u00e1quinas."
+        },
+        {
+            "timestamp": [
+                131.02,
+                137.22
+            ],
+            "text": " Hay cosas m\u00e1s bonitas como esta y otras que no lo son tanto y no me acuerdo de ninguna."
+        },
+        {
+            "timestamp": [
+                137.3,
+                138.9
+            ],
+            "text": " Me gusta Catalu\u00f1a. Hacen cosas."
+        },
+        {
+            "timestamp": [
+                139.38,
+                138.9
+            ],
+            "text": ""
+        },
+        {
+            "timestamp": [
+                143.8,
+                143.98
+            ],
+            "text": " He ido bastantes veces este a\u00f1o a Catalu\u00f1a, tengo muchos viajes al extranjero."
+        },
+        {
+            "timestamp": [
+                148.42,
+                148.6
+            ],
+            "text": " Esto no es como el agua que cae del cielo sin que se sepa exactamente por qu\u00e9, no."
+        },
+        {
+            "timestamp": [
+                157.04,
+                157.5
+            ],
+            "text": " Todo lo que se refiere a m\u00ed y que figura all\u00ed y a los compa\u00f1eros del Partido Miro que figuran all\u00ed, no es cierto, salvo alguna cosa."
+        },
+        {
+            "timestamp": [
+                160.92,
+                161.74
+            ],
+            "text": " Que la EPA de ma\u00f1ana va a ser la que vamos a conocer en el d\u00eda de ma\u00f1ana."
+        },
+        {
+            "timestamp": [
+                163.0,
+                null
+            ],
+            "text": " Fin de la cita."
+        }
+    ]
+}
