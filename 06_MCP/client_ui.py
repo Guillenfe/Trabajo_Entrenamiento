@@ -3,8 +3,6 @@ import gradio as gr
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-# Configuración para conectar con tu servidor
-# 'command' es el ejecutable y 'args' es la ruta a tu archivo server.py
 server_params = StdioServerParameters(
     command="python",
     args=["server.py"], 
@@ -22,7 +20,6 @@ async def call_mcp_tool(tool_name, arguments):
     except Exception as e:
         return f"Error de conexión con el servidor MCP: {str(e)}"
 
-# Funciones de ayuda para los botones de Gradio
 def search_movie_handler(query):
     return asyncio.run(call_mcp_tool("search_movie", {"query": query}))
 
@@ -35,7 +32,6 @@ def check_availability_handler(movie, location):
 def get_person_handler(name):
     return asyncio.run(call_mcp_tool("get_person_details", {"name": name}))
 
-# Interfaz Moderna de Gradio
 with gr.Blocks(title="Cinema MCP Client", theme=gr.themes.Soft()) as demo:
     gr.Markdown("# Cinema Checker - MCP Client")
     gr.Markdown("Este Gradio actúa como cliente del servidor `server.py` usando el protocolo MCP.")
