@@ -104,13 +104,40 @@ async def get_person_details(name: str):
         top_works = ", ".join([c.get("title", c.get("name")) for c in credits[:5]])
 
         return f"Name: {p['name']}\nRole: {dept}\nBio: {bio[:500]}...\nNotable Works: {top_works}"
+    
 
-async def test(movie:str, location:str):
-    # Manually testing the tool function
-    print("Testing Movie Availability Tool...")
-    result = await check_movie_availability("wuthering heights", "Madrid", "feb 28")
-    print(f"\nResults:\n{result}")
+
+async def test_manual(movie: str, location: str):
+        """Función de prueba manual para verificar que el scraper y la API funcionan"""
+        print(f"\n--- INICIANDO TEST PARA: {movie} en {location} ---")
+        
+        # 1. Probar búsqueda de info (TMDB)
+        print("\n[1/2] Consultando información en TMDB...")
+        info = await search_movie(movie)
+        print(f"Resultado TMDB:\n{info}")
+        
+        # 2. Probar disponibilidad (Playwright/Google)
+        print(f"\n[2/2] Buscando funciones en Google para {location}...")
+        disponibilidad = await check_movie_availability(movie, location)
+        print(f"Resultado Cartelera:\n{disponibilidad}")
+        print("\n--- TEST FINALIZADO ---\n")
 
 if __name__ == "__main__":
-    asyncio.run(test("Wuthering Heights", "Madrid"))
+    # IMPORTANTE: Ejecutamos el test y LUEGO el servidor
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
+    loop.run_until_complete(test_manual("Scream 7", "Madrid"))
+    
+    print("Iniciando servidor MCP...")
     mcp.run()
+
+# async def test(movie:str, location:str):
+#     # Manually testing the tool function
+#     print("Testing Movie Availability Tool...")
+#     result = await check_movie_availability("wuthering heights", "Madrid", "feb 28")
+#     print(f"\nResults:\n{result}")
+
+# if __name__ == "__main__":
+#     # asyncio.run(test("Wuthering Heights", "Madrid"))
+#     mcp.run()
